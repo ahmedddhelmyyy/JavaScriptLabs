@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="javaScript.js" defer></script>
+  <title>Lab 5</title>
+  <style>
+/* fieldset{
+  background-color: rgb(196, 205, 205);
+} */
+
+
+  #ff {
+    background-color: rgb(203, 194, 194);
+    padding: 20px;
+    border-radius: 15px;
+    color: rgb(34, 26, 26); 
+  }
+
+  table{
+    background-color: rgb(245, 242, 242);
+    padding: 20px;
+    border-radius: 5px;
+    color: rgb(34, 26, 26); 
+  
+  }
+
+
+  </style>
+</head>
+<body>
+
+    <section class="q1">
+        
+            <fieldset >
+                <button id="nxt">Next</button>
+                <button id="prv">Previous</button>
+                <button id="slid">Slide Show</button>
+                <button id="stp">Stop</button>
+                <button type="button" disabled>Ahmed Helmy's Solution </button>
+
+                <div id="imgg" style="width: 150px; height: 150px; overflow: hidden;">
+                    <br>
+                    <img src="imgs\1.jpg" alt="Small Image" style="width: 100%; height: 100%; margin: ayto;" />
+                    <img src="imgs\2.jpg" alt="Small Image" style="width: 100%; height: 100%; margin: auto;" />
+                  <img src="imgs\3.jpg" alt="Small Image" style="width: 100%; height: 100%; margin: auto;" />
+                </div>
+                  <div id="fot" style="background-color: azure;">
+<hr>
+
+<hr>
+                  </div>
+            </fieldset>
+        
+    </section>
+
+<!-- ============================================= -->
+<fieldset id=>
+  <div id="ff" >
+    <form id="StuForm" onsubmit="handleSubmit(event)">
+      <lable>Enter the Student data :</lable>
+      <input type="text" id="stuName" placeholder="Student Name" />
+      <input type="number" id="stuGrade" placeholder="Grade (0–100)" />
+      <input type="radio" name="dep" value="SD" checked> SD
+      <input type="radio" name="dep" value="OS"> OS
+      <input type="radio" name="dep" value="EL"> EL
+      <button type="submit">Add</button>
+      <br>
+      <span id="error" style="color:red;"></span>
+    </form>
+    <br>
+    <hr>
+    <lable>students Table</lable>
+    <table border="1" id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Grade</th>
+          <th>Department</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+<br>
+<br>
+<label>Sort By : </label>
+<select name="sortBy" id="srt" onchange="applySort()">
+  <option value="nammee">Name</option>
+  <option value="graddee">Grade</option>
+</select>
+
+<lable>Filter By</lable>
+<select name="filterBy" id="frt" onchange="applyFilter()">
+  <option value="all">All</option>
+  <option value="greater">Greater than 60</option>
+  <option value="less">Less than 60</option>
+</select>
+
+
+  </div>    
+
+  <footer>
+
+  </footer>
+</body>
+</html>
